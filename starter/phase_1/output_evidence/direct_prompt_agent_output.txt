@@ -1,0 +1,2 @@
+The capital of France is Paris.
+Knowledge source: general knowledge from the selected GPT-3.5 Turbo model.

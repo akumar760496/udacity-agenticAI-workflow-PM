@@ -29,11 +29,14 @@ phase_1/
 ├── rag_knowledge_prompt_agent.py
 ├── evaluation_agent.py
 ├── routing_agent.py
-└── action_planning_agent.py
+├── action_planning_agent.py
+└── output_evidence/             ← terminal-output evidence for each script
 ```
 
 * `workflow_agents` is a Python package containing all your agent class definitions.
 * One script per agent to test their functionality has also been provided in the folder.
+* `output_evidence` contains one captured output transcript per test script, including
+  the prompt and the resulting agent response.
 
 **Environment Configuration:** Create a `.env` file in the `tests/` folder containing your OpenAI API key:
 

@@ -123,6 +123,9 @@ python action_planning_agent.py
 The RAG script creates chunk and embedding CSV files while it runs. These are
 runtime outputs and should not be committed unless explicitly required.
 
+Captured terminal-output evidence for each Phase 1 script is available in
+`starter/phase_1/output_evidence/`.
+
 ## 7. Validate Phase 1 syntax
 
 From the Phase 1 directory, run:

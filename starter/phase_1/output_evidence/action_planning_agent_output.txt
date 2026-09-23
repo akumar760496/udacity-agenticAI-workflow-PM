@@ -1,0 +1,32 @@
+Traceback (most recent call last):
+  File "/Users/ajay/Documents/udacity_agenticai_project/PROJECT/starter/phase_1/action_planning_agent.py", line 38, in <module>
+    print(action_planning_agent.extract_steps_from_prompt(
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        "One morning I wanted to have scrambled eggs"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ))
+    ^
+  File "/Users/ajay/Documents/udacity_agenticai_project/PROJECT/starter/phase_1/workflow_agents/base_agents.py", line 314, in extract_steps_from_prompt
+    response = client.chat.completions.create(
+        model="gpt-3.5-turbo",
+    ...<14 lines>...
+        temperature=0,
+    )
+  File "/Users/ajay/Documents/udacity_agenticai_project/PROJECT/.venv/lib/python3.14/site-packages/openai/_utils/_utils.py", line 287, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/ajay/Documents/udacity_agenticai_project/PROJECT/.venv/lib/python3.14/site-packages/openai/resources/chat/completions/completions.py", line 925, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<43 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ajay/Documents/udacity_agenticai_project/PROJECT/.venv/lib/python3.14/site-packages/openai/_base_client.py", line 1239, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajay/Documents/udacity_agenticai_project/PROJECT/.venv/lib/python3.14/site-packages/openai/_base_client.py", line 1034, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.AuthenticationError: Error code: 401 - {'error': {'message': 'Incorrect API key provided: voc-1997**************************************6834. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}

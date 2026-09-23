@@ -310,7 +310,10 @@ class ActionPlanningAgent:
         self.knowledge = knowledge
 
     def extract_steps_from_prompt(self, prompt):
-        client = OpenAI(api_key=self.openai_api_key)
+        client = OpenAI(
+            api_key=self.openai_api_key,
+            base_url="https://openai.vocareum.com/v1",
+        )
         response = client.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[
